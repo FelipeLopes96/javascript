@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        
+    </style>
+    <title>Verificação de País</title>
+</head>
+<body>
+    <h1>Digite abaixo o seu País</h1>
+    <input type="text" name="country" id="country">
+    <input type="button" value="Verificar" onclick="click()">
+    <div id="res">
+
+    </div>
+    <script>
+        
+        function click() {
+        let pais = document.getElementById('country')
+        let res = document.getElementById('res')
+        
+        res.innerText = `<p>A sua velocidade atual é de <strong>${pais}Km/h</strong></p>`
+        if (pais === Brasil) {
+            res.innerText += '<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>'
+        }
+        res.innerText += '<p>Dirija sempre com cinto de segurança</p>'
+    }
+</script>
+</body>
+</html>
